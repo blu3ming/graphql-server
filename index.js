@@ -53,6 +53,14 @@ const resolvers = {
             return personas.find(persona => persona.name === name)
         }
     },
+    Persona: {
+        address: (root) => {
+            return {
+                street: root.street,
+                city: root.city
+            }
+        }
+    }
 }
 
 const server = new ApolloServer ({
