@@ -33,9 +33,7 @@ const typeDefs = gql`
     type Persona{
         name: String!
         phone: String
-        street: String!
-        city: String!
-        address: String!
+        address: Address!
         id: ID!
     }
 
@@ -55,9 +53,6 @@ const resolvers = {
             return personas.find(persona => persona.name === name)
         }
     },
-    Persona: {
-        address: (root) => `${root.street}, ${root.city}`
-    }
 }
 
 const server = new ApolloServer ({
