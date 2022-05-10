@@ -25,6 +25,11 @@ const personas = [
 ]
 
 const typeDefs = gql`
+    type Address{
+        street: String!
+        city: String!
+    }
+
     type Persona{
         name: String!
         phone: String
