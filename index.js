@@ -45,3 +45,8 @@ const resolvers = {
         allPersons: () => personas
     }
 }
+
+const server = new ApolloServer ({
+    typeDefs,
+    resolvers
+})
