@@ -1,3 +1,5 @@
+import {gql} from 'apollo-server'
+
 const personas = [
     {
         name: "Hyojung",
@@ -21,3 +23,13 @@ const personas = [
         id: "OMG-3"
     }
 ]
+
+const typeDefs = gql`
+    type Persona{
+        name: String!
+        phone: String
+        street: String!
+        city: String!
+        id: ID!
+    }
+`
