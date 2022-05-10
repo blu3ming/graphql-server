@@ -48,6 +48,9 @@ const resolvers = {
             const {name} = args
             return personas.find(persona => persona.name === name)
         }
+    },
+    Persona: {
+        address: (root) => `${root.street}, ${root.city}`
     }
 }
 
