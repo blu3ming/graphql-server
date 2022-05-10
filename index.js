@@ -38,3 +38,10 @@ const typeDefs = gql`
         allPersons: [Persona]!
     }
 `
+
+const resolvers = {
+    Query: {
+        personCount: () => personas.length,
+        allPersons: () => personas
+    }
+}
