@@ -36,6 +36,7 @@ const typeDefs = gql`
     type Query{
         personCount: Int!
         allPersons: [Persona]!
+        findPersona(name: String!): Persona
     }
 `
 
