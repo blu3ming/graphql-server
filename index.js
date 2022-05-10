@@ -30,6 +30,7 @@ const typeDefs = gql`
         phone: String
         street: String!
         city: String!
+        address: String!
         id: ID!
     }
 
