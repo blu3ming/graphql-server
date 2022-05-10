@@ -32,4 +32,9 @@ const typeDefs = gql`
         city: String!
         id: ID!
     }
+
+    type Query{
+        personCount: Int!
+        allPersons: [Persona]!
+    }
 `
