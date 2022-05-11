@@ -42,6 +42,15 @@ const typeDefs = gql`
         allPersons: [Persona]!
         findPersona(name: String!): Persona
     }
+
+    type Mutation{
+        addPersona(
+            name: String!
+            phone: String
+            street: String!
+            city: String!
+        ): Persona
+    }
 `
 
 const resolvers = {
