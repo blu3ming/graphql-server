@@ -11,7 +11,6 @@ const personas = [
     },
     {
         name: "Seunghee",
-        phone: "22222222",
         street: "11",
         city: "Seoul",
         id: "OMG-2"
