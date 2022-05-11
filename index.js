@@ -63,6 +63,14 @@ const resolvers = {
             return personas.find(persona => persona.name === name)
         }
     },
+    Mutation: {
+        addPersona: (root, args) => {
+            //const {name, phone, street, city} = args;
+            const persona = {...args, id: uuid()}
+            personas.push(persona);
+            return persona;
+        }
+    },
     Persona: {
         address: (root) => {
             return {
