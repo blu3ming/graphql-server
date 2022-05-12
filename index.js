@@ -55,6 +55,10 @@ const typeDefs = gql`
             street: String!
             city: String!
         ): Persona
+        editNumber(
+            name: String!
+            phone: String!
+        ): Persona
     }
 `
 
