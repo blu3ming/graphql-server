@@ -42,9 +42,20 @@ const typeDefs = gql`
         id: ID!
     }
 
+    type Explorer{
+        id: ID!
+        name: String!
+        username: String!
+        mission: String!
+        azureCertificacion: Boolean!
+        dateCreated: String!
+        lastUpdated: String!
+    }
+
     type Query{
         personCount: Int!
         allPersons(phone: YesNo): [Persona]!
+        allExplorersAPI: Explorer
         findPersona(name: String!): Persona
     }
 
