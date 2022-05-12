@@ -56,7 +56,7 @@ const typeDefs = gql`
     type Query{
         personCount: Int!
         allPersons(phone: YesNo): [Persona]!
-        allExplorersAPI: Explorer
+        allExplorersAPI: [Explorer]
         findPersona(name: String!): Persona
     }
 
