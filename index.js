@@ -25,6 +25,11 @@ const personas = [
 ]
 
 const typeDefs = gql`
+    enum YesNo {
+        YES
+        NO
+    }
+    
     type Address{
         street: String!
         city: String!
