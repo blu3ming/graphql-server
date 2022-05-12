@@ -1,4 +1,5 @@
 import {ApolloServer, gql, UserInputError} from 'apollo-server'
+import axios from 'axios'
 import {v1 as uuid} from 'uuid'
 
 const personas = [
@@ -81,6 +82,10 @@ const resolvers = {
             const byPhone = persona =>
                 args.phone === "YES" ? persona.phone : !persona.phone
             return personas.filter(byPhone)
+        },
+        allExplorersAPI: async() => {
+            const {data: personsFromAPI} = await axios.get('http://localhost:3000/explorers')
+            return personsFromAPI
         },
         findPersona: (root, args) => {
             const {name} = args
