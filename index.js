@@ -87,6 +87,14 @@ const resolvers = {
             const persona = {...args, id: uuid()}
             personas.push(persona);
             return persona;
+        },
+        editNumber: (root, args) => {
+            const personIndex = personas.findIndex(persona => persona.name === args.name)
+            if (personIndex === -1) return null
+            const person = personas[personIndex]
+            const updatedPersona = {...person, phone : args.phone}
+            personas[personIndex] = updatedPersona
+            return updatedPersona
         }
     },
     Persona: {
