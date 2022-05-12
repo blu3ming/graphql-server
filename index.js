@@ -29,7 +29,7 @@ const typeDefs = gql`
         YES
         NO
     }
-    
+
     type Address{
         street: String!
         city: String!
@@ -44,7 +44,7 @@ const typeDefs = gql`
 
     type Query{
         personCount: Int!
-        allPersons: [Persona]!
+        allPersons(phone: YesNo): [Persona]!
         findPersona(name: String!): Persona
     }
 
